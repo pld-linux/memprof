@@ -1,5 +1,5 @@
 Summary:	Tool for memory profiling and leak detection
-Summary(pl):	Narzêdzie do profilowania i detekcji leak'ów pamiêci
+Summary(pl):	Narzêdzie do profilowania i detekcji wycieków pamiêci
 Name:		memprof
 Version:	0.4.1
 Release:	4
@@ -12,9 +12,10 @@ Source0:	ftp://ftp.gnome.org/pub/GNOME/stable/sources/memprof/%{name}-%{version}
 URL:		http://people.redhat.com/~otaylor/memprof/
 BuildRequires:	autoconf
 BuildRequires:	automake
+BuildRequires:	libtool
+BuildRequires:	gettext-devel
 BuildRequires:	binutils-static
 BuildRequires:	libglade-devel >= 0.7
-BuildRequires:	gettext-devel
 BuildRequires:	gnome-libs-devel
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
@@ -27,7 +28,7 @@ recompilation.
 
 %description -l pl
 Memprof jest narzêdziem do profilowania pamiêci oraz detekcji 
-"memory leak'ów". Mo¿e byæ u¿ywany z istniej±cymi binariami bez
+"memory leaków". Mo¿e byæ u¿ywany z istniej±cymi binariami bez
 konieczno¶ci ich przebudowywania.
 
 %prep
@@ -50,11 +51,11 @@ rm -rf $RPM_BUILD_ROOT
 
 %find_lang %{name}
 
-%post   -p /sbin/ldconfig
-%postun -p /sbin/ldconfig
-
 %clean
 rm -rf $RPM_BUILD_ROOT
+
+%post   -p /sbin/ldconfig
+%postun -p /sbin/ldconfig
 
 %files -f %{name}.lang
 %defattr(644,root,root,755)
