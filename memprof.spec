@@ -36,7 +36,7 @@ ich przebudowywania.
 rm -f missing
 %{__gettextize}
 %{__libtoolize}
-aclocal
+%{__aclocal}
 %{__autoconf}
 %{__automake}
 %configure
