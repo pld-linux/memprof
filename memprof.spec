@@ -19,7 +19,6 @@ BuildRequires:	libglade-gnome-devel >= 0.7
 BuildRequires:	libtool
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
-
 %description
 Memprof is a tool for profiling memory usage and detecting memory
 leaks. It can be used with existing binaries without need for
@@ -35,7 +34,6 @@ ich przebudowywania.
 %patch0 -p1
 
 %build
-rm -f missing
 %{__gettextize}
 %{__libtoolize}
 %{__aclocal}
@@ -47,7 +45,7 @@ rm -f missing
 rm -rf $RPM_BUILD_ROOT
 %{__make} install \
 	DESTDIR=$RPM_BUILD_ROOT \
-	Developmentdir=%{_desktopdir}/Development
+	Developmentdir=%{_desktopdir}
 
 %find_lang %{name}
 
@@ -62,5 +60,5 @@ rm -rf $RPM_BUILD_ROOT
 %attr(755,root,root) %{_bindir}/*
 %attr(755,root,root) %{_libdir}/lib*.so
 %{_datadir}/memprof
-%{_desktopdir}/Development/*
+%{_desktopdir}/*.desktop
 %{_pixmapsdir}/*
