@@ -1,14 +1,15 @@
 Summary:	Tool for memory profiling and leak detection
 Name:		memprof
 Version:	0.3.0
-Release:	10
+Release:	11
 License:	GPL
 Group:		Development/Debuggers
+Group(de):	Entwicklung/Debugger
 Group(pl):	Programowanie/Odpluskwiacze
 Source0:	%{name}-%{version}.tar.gz
 BuildRequires:	libglade-devel >= 0.7-1
 BuildRequires:	gettext-devel
-BuildRequires:	binutils-static >= 2.10.0.24
+BuildRequires:	binutils-static >= 2.10.0.31
 BuildRequires:	gnome-libs-devel
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
@@ -24,7 +25,6 @@ recompilation.
 
 %build
 gettextize --copy --force
-LDFLAGS="-s"; export LDFLAGS
 %configure \
 	--disable-static
 
@@ -34,8 +34,6 @@ rm -rf $RPM_BUILD_ROOT
 	DESTDIR=$RPM_BUILD_ROOT \
 	Developmentdir=%{_applnkdir}/Development
 
-strip --strip-unneeded $RPM_BUILD_ROOT%{_libdir}/lib*.so
-
 #%find_lang %{name}
 
 %post   -p /sbin/ldconfig
@@ -44,8 +42,8 @@ strip --strip-unneeded $RPM_BUILD_ROOT%{_libdir}/lib*.so
 %clean
 rm -rf $RPM_BUILD_ROOT
 
-%files
 #%files -f %{name}.lang
+%files
 %defattr(644,root,root,755)
 %attr(755,root,root) %{_bindir}/*
 %attr(755,root,root) %{_libdir}/lib*.so
