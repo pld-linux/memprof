@@ -12,10 +12,9 @@ BuildRequires:	gettext-devel
 BuildRequires:	automake
 BuildRequires:	binutils = 2.9.5.0.29
 BuildRequires:	gnome-libs-devel
-BuildRoot:	/tmp/%{name}-%{version}-root
+BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %define		_prefix		/usr/X11R6
-%define		_applnkdir	%{_datadir}/applnk
 
 %description
 Memprof is a tool for profiling memory usage and detecting memory leaks. It
