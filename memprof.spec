@@ -47,7 +47,7 @@ rm -f missing
 rm -rf $RPM_BUILD_ROOT
 %{__make} install \
 	DESTDIR=$RPM_BUILD_ROOT \
-	Developmentdir=%{_applnkdir}/Development
+	Developmentdir=%{_desktopdir}/Development
 
 %find_lang %{name}
 
@@ -62,4 +62,5 @@ rm -rf $RPM_BUILD_ROOT
 %attr(755,root,root) %{_bindir}/*
 %attr(755,root,root) %{_libdir}/lib*.so
 %{_datadir}/memprof
+%{_desktopdir}/Development/*
 %{_pixmapsdir}/*
