@@ -6,8 +6,6 @@ Release:	4
 Epoch:		1
 License:	GPL
 Group:		Development/Debuggers
-Group(de):	Entwicklung/Debugger
-Group(pl):	Programowanie/Odpluskwiacze
 Source0:	ftp://ftp.gnome.org/pub/GNOME/stable/sources/memprof/%{name}-%{version}.tar.gz
 URL:		http://people.redhat.com/~otaylor/memprof/
 BuildRequires:	autoconf
