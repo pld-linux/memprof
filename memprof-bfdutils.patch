@@ -1,0 +1,11 @@
+--- memprof-0.4.1/bfdutils.c-orig	2005-03-16 19:56:25.307657136 +0100
++++ memprof-0.4.1/bfdutils.c	2005-03-16 19:57:32.240481800 +0100
+@@ -163,7 +163,7 @@
+ 				 * into the internals instead. :-(
+ 				 */
+ 				/* (*func) (addr, bfd_section_size (map->abfd, section), user_data); */
+-				(*func) (addr, section->_cooked_size, user_data);
++				(*func) (addr, section->size, user_data);
+ 			}
+ 		}
+ }
