@@ -7,6 +7,7 @@ Epoch:		1
 License:	GPL
 Group:		Development/Debuggers
 Source0:	ftp://ftp.gnome.org/pub/GNOME/sources/memprof/0.4/%{name}-%{version}.tar.gz
+# Source0-md5:	a3aab0b210bc6a49765e48c93808931c
 URL:		http://www.gnome.org/projects/memprof/
 BuildRequires:	autoconf
 BuildRequires:	automake
