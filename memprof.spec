@@ -36,7 +36,7 @@ make install \
 
 strip --strip-unneeded $RPM_BUILD_ROOT%{_libdir}/lib*.so
 
-%find_lang %{name}
+#%find_lang %{name}
 
 %post   -p /sbin/ldconfig
 %postun -p /sbin/ldconfig
@@ -44,6 +44,7 @@ strip --strip-unneeded $RPM_BUILD_ROOT%{_libdir}/lib*.so
 %clean
 rm -rf $RPM_BUILD_ROOT
 
+#%files
 %files -f %{name}.lang
 %defattr(644,root,root,755)
 %attr(755,root,root) %{_bindir}/*
