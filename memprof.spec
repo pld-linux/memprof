@@ -2,7 +2,7 @@ Summary:	Tool for memory profiling and leak detection
 Summary(pl):	Narzêdzie do profilowania i detekcji wycieków pamiêci
 Name:		memprof
 Version:	0.4.1
-Release:	4
+Release:	5
 Epoch:		1
 License:	GPL
 Group:		Development/Debuggers
@@ -10,11 +10,11 @@ Source0:	ftp://ftp.gnome.org/pub/GNOME/stable/sources/memprof/%{name}-%{version}
 URL:		http://people.redhat.com/~otaylor/memprof/
 BuildRequires:	autoconf
 BuildRequires:	automake
-BuildRequires:	libtool
-BuildRequires:	gettext-devel
 BuildRequires:	binutils-static
-BuildRequires:	libglade-devel >= 0.7
+BuildRequires:	gettext-devel
 BuildRequires:	gnome-libs-devel
+BuildRequires:	libglade-gnome-devel >= 0.7
+BuildRequires:	libtool
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %define		_prefix		/usr/X11R6
