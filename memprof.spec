@@ -37,8 +37,8 @@ rm -f missing
 gettextize --copy --force
 libtoolize --copy --force
 aclocal
-autoconf
-automake -a -c -f
+%{__autoconf}
+%{__automake}
 %configure
 
 %install
