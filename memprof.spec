@@ -25,9 +25,9 @@ leaks. It can be used with existing binaries without need for
 recompilation.
 
 %description -l pl
-Memprof jest narzêdziem do profilowania pamiêci oraz detekcji 
-"memory leaków". Mo¿e byæ u¿ywany z istniej±cymi binariami bez
-konieczno¶ci ich przebudowywania.
+Memprof jest narzêdziem do profilowania pamiêci oraz detekcji "memory
+leaków". Mo¿e byæ u¿ywany z istniej±cymi binariami bez konieczno¶ci
+ich przebudowywania.
 
 %prep
 %setup -q
