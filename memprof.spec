@@ -1,7 +1,7 @@
 Summary:	Tool for memory profiling and leak detection
 Name:		memprof
 Version:	0.3.0
-Release:	11
+Release:	12
 License:	GPL
 Group:		Development/Debuggers
 Group(de):	Entwicklung/Debugger
@@ -9,7 +9,7 @@ Group(pl):	Programowanie/Odpluskwiacze
 Source0:	%{name}-%{version}.tar.gz
 BuildRequires:	libglade-devel >= 0.7-1
 BuildRequires:	gettext-devel
-BuildRequires:	binutils-static >= 2.10.0.31
+BuildRequires:	binutils-static >= 2.10.0.33
 BuildRequires:	gnome-libs-devel
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
