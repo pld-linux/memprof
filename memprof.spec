@@ -1,16 +1,14 @@
 Summary:	Tool for memory profiling and leak detection
 Name:		memprof
 Version:	0.3.0
-Release:	6
+Release:	7
 License:	GPL
 Group:		Development/Debuggers
 Group(pl):	Programowanie/Odpluskwiacze
-Source:		%{name}-%{version}.tar.gz
-Patch:		memprof-applnk.patch
+Source0:	%{name}-%{version}.tar.gz
 BuildRequires:	libglade-devel >= 0.7-1
 BuildRequires:	gettext-devel
-BuildRequires:	automake
-BuildRequires:	binutils = 2.9.5.0.29
+BuildRequires:	binutils = 2.9.5.0.35
 BuildRequires:	gnome-libs-devel
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
@@ -22,18 +20,18 @@ can be used with existing binaries without need for recompilation.
 
 %prep
 %setup -q
-%patch -p1
 
 %build
 gettextize --copy --force
-automake
 LDFLAGS="-s"; export LDFLAGS
 %configure \
 	--disable-static
 
 %install
 rm -rf $RPM_BUILD_ROOT
-make install DESTDIR=$RPM_BUILD_ROOT
+make install \
+	DESTDIR=$RPM_BUILD_ROOT \
+	Developmentdir=%{_applnkdir}/Development
 
 strip --strip-unneeded $RPM_BUILD_ROOT%{_libdir}/lib*.so
 
