@@ -1,7 +1,8 @@
 Summary:	Tool for memory profiling and leak detection
+Summary(pl):	Narzêdzie do profilowania i detekcji leak'ów pamiêci
 Name:		memprof
 Version:	0.4.1
-Release:	3
+Release:	4
 Epoch:		1
 License:	GPL
 Group:		Development/Debuggers
@@ -24,11 +25,18 @@ Memprof is a tool for profiling memory usage and detecting memory
 leaks. It can be used with existing binaries without need for
 recompilation.
 
+%description -l pl
+Memprof jest narzêdziem do profilowania pamiêci oraz detekcji 
+"memory leak'ów". Mo¿e byæ u¿ywany z istniej±cymi binariami bez
+konieczno¶ci ich przebudowywania.
+
 %prep
 %setup -q
 
 %build
+rm -f missing
 gettextize --copy --force
+libtoolize --copy --force
 aclocal
 autoconf
 automake -a -c
