@@ -10,6 +10,8 @@ Patch:		memprof-applnk.patch
 BuildRequires:	libglade-devel >= 0.7-1
 BuildRequires:	gettext-devel
 BuildRequires:	automake
+BuildRequires:	binutils
+BuildRequires:	gnome-libs-devel
 BuildRoot:	/tmp/%{name}-%{version}-root
 
 %define		_prefix		/usr/X11R6
