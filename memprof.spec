@@ -17,7 +17,6 @@ BuildRequires:	libglade-gnome-devel >= 0.7
 BuildRequires:	libtool
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
-%define		_prefix		/usr/X11R6
 
 %description
 Memprof is a tool for profiling memory usage and detecting memory
