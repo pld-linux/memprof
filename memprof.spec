@@ -1,7 +1,7 @@
 Summary:	Tool for memory profiling and leak detection
 Name:		memprof
 Version:	0.3.0
-Release:	4
+Release:	5
 License:	GPL
 Group:		Development/Debuggers
 Group(pl):	Programowanie/Odpluskwiacze
