@@ -7,7 +7,7 @@ Epoch:		1
 License:	GPL
 Group:		Development/Debuggers
 Source0:	ftp://ftp.gnome.org/pub/GNOME/sources/memprof/0.4/%{name}-%{version}.tar.gz
-URL:		http://people.redhat.com/~otaylor/memprof/
+URL:		http://www.gnome.org/projects/memprof/
 BuildRequires:	autoconf
 BuildRequires:	automake
 BuildRequires:	binutils-static
