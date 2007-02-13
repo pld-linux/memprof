@@ -1,5 +1,5 @@
 Summary:	Tool for memory profiling and leak detection
-Summary(pl.UTF-8):   Narzędzie do profilowania i detekcji wycieków pamięci
+Summary(pl.UTF-8):	Narzędzie do profilowania i detekcji wycieków pamięci
 Name:		memprof
 Version:	0.4.1
 Release:	5
