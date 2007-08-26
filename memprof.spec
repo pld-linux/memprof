@@ -1,12 +1,13 @@
+# TODO: update to 0.6
 Summary:	Tool for memory profiling and leak detection
 Summary(pl.UTF-8):	Narzędzie do profilowania i detekcji wycieków pamięci
 Name:		memprof
 Version:	0.4.1
 Release:	5
 Epoch:		1
-License:	GPL
+License:	GPL v2+
 Group:		Development/Debuggers
-Source0:	ftp://ftp.gnome.org/pub/GNOME/sources/memprof/0.4/%{name}-%{version}.tar.gz
+Source0:	http://ftp.gnome.org/pub/GNOME/sources/memprof/0.4/%{name}-%{version}.tar.gz
 # Source0-md5:	a3aab0b210bc6a49765e48c93808931c
 Patch0:		%{name}-bfdutils.patch
 URL:		http://www.gnome.org/projects/memprof/
