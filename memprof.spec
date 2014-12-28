@@ -14,7 +14,7 @@ URL:		http://www.gnome.org/projects/memprof/
 BuildRequires:	autoconf
 BuildRequires:	automake
 BuildRequires:	binutils-static
-BuildRequires:	gettext-devel
+BuildRequires:	gettext-tools
 BuildRequires:	gnome-libs-devel
 BuildRequires:	libglade-gnome-devel >= 0.7
 BuildRequires:	libtool
